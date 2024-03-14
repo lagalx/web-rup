@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+*:focus-visible{
+  @apply outline-gray-500
+}
+
+.color_checker{
+  border: 1px solid black;
+  border-radius: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 1px;
+}
+
+.color_checker:checked {
+  appearance: auto;
+  clip-path: circle(50% at 50% 50%);
+  border: 1px solid black;
+  border-radius: 100%;
+  padding: 1px;
+}
+
+.basic_input {
+  @apply h-10 p-1 rounded-xl border-2 border-gray-300 duration-300
+}
+
+.basic_button {
+  @apply bg-gray-300 p-2 rounded-lg
+}
+
+input[type="checkbox"]:checked{
+  background: black !important;
+  color: black;
+}
